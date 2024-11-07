@@ -1,3 +1,7 @@
+User will access the URL which will be resolved to an endpoint from Amazon route 53. The endpoint will be of Amazon Cloudfront Content Delivery Network which will cache so many things to serve global audience. From there the request will be redirected to Application Load Balancer which is part of Elastic Beanstalk. Application LB will forward request to EC2 instance which is in an autoscaling group. Here are Tomcat application service will be running. There will be also Amazon Cloudwatch alarms which will be monitoring auto scaling groups and will scale out or scale in based on the requirement. Artifacts will be stored in s3 bucket. We can deploy latest artifact by just clicking a button. Entire frontend will be managed by Beanstalk. Backend we are using AmazonMQ as message broker service, elastic cache service and RDS.
+
+
+
 # Prerequisites
 #
 - JDK 1.8 or later
